@@ -1191,7 +1191,8 @@ tblptr
 tblptrh
 tblptrl
 tblptru
-temp
+temph
+templ
 tmr0h
 tmr0ie
 tmr0ie_bit

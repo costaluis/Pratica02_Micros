@@ -1,8 +1,9 @@
-char temp;
+char tempL, tempH;
 
 void high_int() iv 0x0008 ics ICS_AUTO{
     LATC.F2 = !LATC.F2;
-    TMR0L = temp;
+    TMR0H = tempH;
+    TMR0L = tempL;
     INTCON.f2 = 0;
 }
 
@@ -20,22 +21,28 @@ void main() {
     LATB.F5 = 1;
     LATB.F4 = 1;
 
-    T0CON = 0b01000000;
+    T0CON = 0b00001000;
 
     while(1){
         LATB.F6 = 0;
         //Tecla 7
         if(!PORTB.F0){
-            temp = 129;
-            TMR0L = 129;
+            tempH = 0xFF;
+            TMR0H = 0xFF;
+            tempL = 0x03;
+            TMR0L = 0x03;
+
             T0CON.F7 = 1;
             while(!PORTB.F0){}
             T0CON.F7 = 0;
         }
         //Tecla 8
         if(!PORTB.F1){
-            temp = 135;
-            TMR0L = 135;
+            tempH = 0xFF;
+            TMR0H = 0xFF;
+            tempL = 0x15;
+            TMR0L = 0x15;
+
             T0CON.F7 = 1;
             while(!PORTB.F1){}
             T0CON.F7 = 0;
@@ -45,24 +52,33 @@ void main() {
         LATB.F5 = 0;
         //Tecla 4
         if(!PORTB.F0){
-            temp = 77;
-            TMR0L = 77;
+            tempH = 0xFE;
+            TMR0H = 0xFE;
+            tempL = 0x9A;
+            TMR0L = 0x9A;
+
             T0CON.F7 = 1;
             while(!PORTB.F0){}
             T0CON.F7 = 0;
         }
         //Tecla 5
         if(!PORTB.F1){
-            temp = 97;
-            TMR0L = 97;
+            tempH = 0xFE;
+            TMR0H = 0xFE;
+            tempL = 0xC1;
+            TMR0L = 0xC1;
+
             T0CON.F7 = 1;
             while(!PORTB.F1){}
             T0CON.F7 = 0;
         }
         //Tecla 6
         if(!PORTB.F2){
-            temp = 114;
-            TMR0L = 114;
+            tempH = 0xFE;
+            TMR0H = 0xFE;
+            tempL = 0xE4;
+            TMR0L = 0xE4;
+
             T0CON.F7 = 1;
             while(!PORTB.F2){}
             T0CON.F7 = 0;
@@ -72,24 +88,33 @@ void main() {
         LATB.F4 = 0;
         //Tecla 1
         if(!PORTB.F0){
-            temp = 15;
-            TMR0L = 15;
+            tempH = 0xFE;
+            TMR0H = 0xFE;
+            tempL = 0x1E;
+            TMR0L = 0x1E;
+            
             T0CON.F7 = 1;
             while(!PORTB.F0){}
             T0CON.F7 = 0;
         }
         //Tecla 2
         if(!PORTB.F1){
-            temp = 43;
-            TMR0L = 43;
+            tempH = 0xFE;
+            TMR0H = 0xFE;
+            tempL = 0x56;
+            TMR0L = 0x56;
+
             T0CON.F7 = 1;
             while(!PORTB.F1){}
             T0CON.F7 = 0;
         }
         //Tecla 3
         if(!PORTB.F2){
-            temp = 66;
-            TMR0L = 66;
+            tempH = 0xFE;
+            TMR0H = 0xFE;
+            tempL = 0x85;
+            TMR0L = 0x85;
+
             T0CON.F7 = 1;
             while(!PORTB.F2){}
             T0CON.F7 = 0;
