@@ -1,3 +1,4 @@
 main
+	__CC2DW
 low_int
 high_int
