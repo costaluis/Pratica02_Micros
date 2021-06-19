@@ -2,11 +2,12 @@
 hint: 0	1139	Available RAM: 2027 [bytes], Available ROM: 32768 [bytes]	 
 diagnostics: 0	122	Compilation Started	Pratica2.c
 hint: 0	1004	interrupt handler (high_int at 0x0008)	Pratica2.c
-diagnostics: 101	123	Compiled Successfully	Pratica2.c
-diagnostics: 0	127	All files Compiled in 287 ms	 
-hint: 0	1144	Used RAM (bytes): 1 (1%)  Free RAM (bytes): 2026 (99%)	Used RAM (bytes): 1 (1%)  Free RAM (bytes): 2026 (99%)
-hint: 0	1144	Used ROM (bytes): 236 (1%)  Free ROM (bytes): 32532 (99%)	Used ROM (bytes): 236 (1%)  Free ROM (bytes): 32532 (99%)
+hint: 0	1004	interrupt handler (low_int at 0x0018)	Pratica2.c
+diagnostics: 121	123	Compiled Successfully	Pratica2.c
+diagnostics: 0	127	All files Compiled in 184 ms	 
+hint: 0	1144	Used RAM (bytes): 4 (1%)  Free RAM (bytes): 2023 (99%)	Used RAM (bytes): 4 (1%)  Free RAM (bytes): 2023 (99%)
+hint: 0	1144	Used ROM (bytes): 316 (1%)  Free ROM (bytes): 32452 (99%)	Used ROM (bytes): 316 (1%)  Free ROM (bytes): 32452 (99%)
 diagnostics: 0	125	Project Linked Successfully	Pratica2.mcppi
-diagnostics: 0	128	Linked in 51 ms	 
-diagnostics: 0	129	Project 'Pratica2.mcppi' completed: 398 ms	 
-diagnostics: 0	103	Finished successfully: 16 Jun 2021, 10:56:26	Pratica2.mcppi
+diagnostics: 0	128	Linked in 35 ms	 
+diagnostics: 0	129	Project 'Pratica2.mcppi' completed: 257 ms	 
+diagnostics: 0	103	Finished successfully: 18 Jun 2021, 21:16:40	Pratica2.mcppi

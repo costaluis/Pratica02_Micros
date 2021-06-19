@@ -660,6 +660,7 @@ late2_bit
 longint2double
 longjmp
 longword2double
+low_int
 lvdcon
 lvden
 lvden_bit
