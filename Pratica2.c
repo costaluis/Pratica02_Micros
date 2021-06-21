@@ -4,9 +4,7 @@ void high_int() iv 0x0008 ics ICS_AUTO{
     LATC.F2 = !LATC.F2;
     TMR0L = temp;
     INTCON.f2 = 0;
-}
-
-
+}   
 
 void low_int() iv 0x0018 ics ICS_AUTO {
     if(!PORTB.F0){
@@ -77,18 +75,13 @@ void main() {
 
     while(1){
         LATB.F2 = !LATB.F2;
-        Delay_ms(100);
         LATB.F2 = !LATB.F2;
 
         LATB.F1 = !LATB.F1;
-        Delay_ms(100);
         LATB.F1 = !LATB.F1;
 
-
         LATB.F0 = !LATB.F0;
-        Delay_ms(100);
         LATB.F0 = !LATB.F0; 
-
 
     }
 
